@@ -8,7 +8,7 @@ OS="`uname`"
 #get javastart args
 JAVA_ARGS="-server -Djava.awt.headless=true -Dfile.encoding=UTF-8";
 
-#JAVA_ARGS="-verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails $JAVA_ARGS";
+#JAVA_ARGS="-verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XshowSettings:properties -native -server -d64 -XX:ParallelGCThreads=4 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts -XX:+CMSParallelRemarkEnabled -XX:+DisableExplicitGC -XX:MaxGCPauseMillis=500 -XX:SurvivorRatio=16 -XX:TargetSurvivorRatio=90 -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:UseSSE=3 -XX:MetaspaceSize=128m -XX:LargePageSizeInBytes=4m $JAVA_ARGS";
 
 #check if OS is Sun Solaris or one of the OpenSolaris distributions and use different version of id if necessary
 if [ $OS = "SunOS" ]

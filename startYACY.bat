@@ -11,14 +11,14 @@ Set CLASSPATH=lib\yacycore.jar
 REM Please change the "javastart" settings in the web-interface "Basic Configuration" -> "Advanced" 
 set jmx=
 set jms=
-set javacmd=-Xmx600m
+set javacmd=-Xmx600m -Xms180m
 set priolvl=10
 set priority=/BELOWNORMAL
 if exist DATA\SETTINGS\httpProxy.conf GoTo :RENAMEINDEX
 if exist DATA\SETTINGS\yacy.conf GoTo :GETSTARTOPTS
 
 :STARTJAVA
-set javacmd=%javacmd% -Djava.awt.headless=true -Dsolr.directoryFactory=solr.MMapDirectoryFactory -Dfile.encoding=UTF-8
+set javacmd=%javacmd% -Djava.awt.headless=true -Dsolr.directoryFactory=solr.MMapDirectoryFactory -Dfile.encoding=UTF-8 -XshowSettings:properties -native -server -d64 -XX:ParallelGCThreads=4 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts -XX:+CMSParallelRemarkEnabled -XX:+DisableExplicitGC -XX:MaxGCPauseMillis=500 -XX:SurvivorRatio=16 -XX:TargetSurvivorRatio=90 -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:UseSSE=3 -XX:MetaspaceSize=128m -XX:LargePageSizeInBytes=4m
 
 Rem Starting YaCy
 Echo Generated classpath:%CLASSPATH%
@@ -56,6 +56,7 @@ Rem This target is used to read java runtime parameters out of the yacy config f
 :GETSTARTOPTS
 for /F "tokens=1,2 delims==" %%i in (DATA\SETTINGS\yacy.conf) do (
 	if "%%i"=="javastart_Xmx" set jmx=%%j
+	if "%%i"=="javastart_Xms" set jms=%%j
 	if "%%i"=="javastart_priority" set priolvl=%%j
 )
 if defined jmx set javacmd=-%jmx%
