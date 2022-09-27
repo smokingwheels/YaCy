@@ -7,6 +7,7 @@ Download. Right click save as.
 
 http://165.22.240.144/YaCy_1.925_9749.zip
 
+https://github.com/smokingwheels/YaCy/archive/refs/heads/main.zip
 
 Windows users
 
