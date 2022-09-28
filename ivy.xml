@@ -13,9 +13,7 @@
       <dependency org="com.cybozu.labs" name="langdetect" rev="1.1-20120112" conf="compile->master"/>
       <dependency org="com.drewnoakes" name="metadata-extractor" rev="2.11.0"  />
       <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.11.2"/>
-      <dependency org="com.googlecode.json-simple" name="json-simple" rev="1.1.1" conf="compile->master" />
       <dependency org="com.google.guava" name="guava" rev="25.1-jre" conf="compile->master"/>
-      <dependency org="com.hazelcast" name="hazelcast" rev="4.2" />
       <dependency org="com.ibm.icu" name="icu4j" rev="63.1"/>
       <dependency org="com.jcraft" name="jsch" rev="0.1.54" />
       <dependency org="com.twelvemonkeys.imageio" name="imageio-core" rev="3.3.2"/>
@@ -94,7 +92,6 @@
       <!-- This does not match langdetect.jar from pre-ivy -->
       <dependency org="org.tukaani" name="xz" rev="1.8"/>
       <dependency org="oro" name="oro" rev="2.0.8"/>
-      <dependency org="xml-apis" name="xml-apis" rev="1.4.01"/>
 
       <dependency org="junit" name="junit" rev="4.13" conf="test->default"/>
       <dependency org="org.hamcrest" name="hamcrest" rev="2.2" conf="test->default"/>
