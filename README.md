@@ -41,7 +41,8 @@ Do a backup first.
 Use a Temp Folder to clone.
 Do not Start YaCy in Temp Folder.
 Copy it else where to try.
-
+Pause Crawler.
+Shutdown YaCy.
 Make sure YaCy is not running.
 
 Copy all the files to your YaCy install folder.
