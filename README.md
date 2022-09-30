@@ -9,11 +9,13 @@ http://165.22.240.144/YaCy_1.925_9749.zip
 
 https://github.com/smokingwheels/YaCy/archive/refs/heads/main.zip
 
+
 Windows users
 
 Unzip to c:\
 
 Double click  Install yacy 1.925_9749 icon.
+
 
 
 Linux New First Time Users
@@ -29,6 +31,8 @@ cd YaCy
 ./startYACY.sh
 
 Will open browser to http://localhost:8090
+
+
 
 Linux Upgrade install.
 
