@@ -16,12 +16,33 @@ Unzip to c:\
 Double click  Install yacy 1.925_9749 icon.
 
 
-Linux users
+Linux New First Time Users
 
 sudo apt install openjdk-8-jdk
+
+sudo apt install ant
+
+git clone https://github.com/smokingwheels/YaCy/ 
 
 cd YaCy
 
 ./startYACY.sh
 
 Will open browser to http://localhost:8090
+
+Linux Upgrade install.
+
+Do a backup first. 
+
+Use a Temp Folder to clone.
+Do not Start YaCy in Temp Folder.
+Copy it else where to try.
+
+Make sure YaCy is not running.
+
+Copy all the files to your YaCy install folder.
+
+Do a backup first.
+
+
+
